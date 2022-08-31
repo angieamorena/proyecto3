@@ -1,6 +1,7 @@
 import React from "react";
 import Navegation from '../nav/Nav'
 
+
 const Header = ({titulo, subtitulo}) => {
     //const {titulo, subtitulo} = props
     //const titulo = props.titulo
@@ -15,6 +16,8 @@ const Header = ({titulo, subtitulo}) => {
         </>
     )
 }
+
+ 
 
 
 export default Header;

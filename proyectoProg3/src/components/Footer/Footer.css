@@ -1,13 +1,19 @@
-.footer {
-    background-color: #14213d;
-    color: white;
-    justify-content: space-around;
-    display: flex;
-    padding: 20px;
-    position: sticky;
-    height: 50px;
-    line-height: 50px;}
+.integrantes{
+  margin-left: 10px;
+}
 
-  .footer p {
-    color: white;}
-  
+footer {
+  margin-top: 50px;
+  font-family: unset;
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  border-top: 1px solid rgba(44, 37, 185, 0.781);
+}
+
+
+
