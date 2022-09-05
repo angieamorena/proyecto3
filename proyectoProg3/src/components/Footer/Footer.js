@@ -5,7 +5,7 @@ function Footer() {
 
   return(
       <footer>
-          <p className="integrantes">Maria de los Angeles Amorena, Jimena Freiman y Tadeo Benzadón</p>
+          <p className="alumnos">Maria de los Angeles Amorena, Jimena Freiman y Tadeo Benzadón</p>
       </footer>
   )
 }

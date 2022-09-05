@@ -1,19 +1,23 @@
-.integrantes{
-  margin-left: 10px;
+Footer{
+    background-color: rgb(104, 159, 165);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
 }
 
-footer {
-  margin-top: 50px;
-  font-family: unset;
-  font-size: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  justify-content: space-between;
-  align-items: center;
-  text-decoration: none;
-  border-top: 1px solid rgba(44, 37, 185, 0.781);
+
+.alumnos{
+    font-weight: bolder;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
 }
+
 
 
 
