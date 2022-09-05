@@ -18,10 +18,8 @@ import Pelicula from '../../components/Pelicula/Pelicula';
     fetch(url)
         .then((res)=> res.json())
         .then(datos =>{ 
-            console.log(datos)
-             return this.setState({
-            peliculasPopulares: datos.results,
-        })})
+            return this.setState({
+            peliculasPopulares: datos.results,})})
         .catch( err => console.log(err))
 
         const url2 = "https://api.themoviedb.org/3/movie/now_playing?api_key=93e508f17b507f9418365fe0a4069252"
@@ -36,9 +34,17 @@ import Pelicula from '../../components/Pelicula/Pelicula';
       
  }
 
- agregarMas() {
-  // Logica para agregar mas peliculas ANGIE
- }
+ agregarMas(){
+  const url = ("https://api.themoviedb.org/3/movie/popular?api_key=93e508f17b507f9418365fe0a4069252")
+  fetch(url)
+  .then((res)=> res.json())
+  .then(datos=>{
+      let arrayPrevio = this.state.pelicula;
+      let arrayActualizado = arrayPrevio.concat(datos.results);
+      this.setState({
+          peliculasPopulares:arrayActualizado,
+          peliculasAhora:arrayActualizado,
+      })})}
 
  filtrarpeliculas(filtro){
 
