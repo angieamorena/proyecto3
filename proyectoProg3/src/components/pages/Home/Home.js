@@ -9,11 +9,13 @@ import Pelicula from '../../components/Pelicula/Pelicula';
       cargando: true,
       peliculasPopulares: [],
       peliculasAhora: [],
-      filterBy:''
+      filterBy:'',
+      favoritos:[]
     };
   }    
 
  componentDidMount(){
+  this.setState({favorito: localStorage.getItem('favoritos') || []})
     const url = "https://api.themoviedb.org/3/movie/popular?api_key=93e508f17b507f9418365fe0a4069252"
     fetch(url)
         .then((res)=> res.json())
@@ -67,6 +69,19 @@ import Pelicula from '../../components/Pelicula/Pelicula';
   })
  }
 
+ handleFavorito(pelicula){
+
+  console.log(this.state.favoritos)
+  if (this.state.favoritos.some(fav => pelicula.id === fav.id)){
+  console.log("verdadero")
+ }else{
+this.setState(
+  {favoritos:[...this.state.favoritos, pelicula]}, ()=>
+{ localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
+})
+ }
+}
+ 
   render() {
     return (
     <>
@@ -87,8 +102,13 @@ import Pelicula from '../../components/Pelicula/Pelicula';
             <p>Cargando</p>
           ) : (
         this.state.peliculasPopulares.map(peliculaPopular =>(
-            <Pelicula key={peliculaPopular.id} pelicula={peliculaPopular}/>)
-        )
+            <Pelicula 
+             key={peliculaPopular.id}
+             pelicula={peliculaPopular}
+             favorito={(peliculaPopular)=> this.handleFavoritos (peliculaPopular)}
+             />)
+       
+            )
         
         )
         

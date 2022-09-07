@@ -16,6 +16,7 @@ const eliminar = () => {
       <p>Status: {status}</p>
       <p>Genero: {gender}</p>
       <div className='d-flex justify-content-end'>
+      <button className="btn btn-primary" onClick={()=>{peliculaPopular.favorito(peliculaPopular)}}>Favoritos</button>
         <button className="btn btn-danger" onClick={eliminar}>Eliminar</button>
         <Link to={`/detailMovie/id/${id}`} className="btn btn-warning" >Detalle</Link>
       </div>
