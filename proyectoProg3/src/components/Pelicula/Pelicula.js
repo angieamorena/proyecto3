@@ -1,29 +1,40 @@
-import React from 'react'
-import "./Pelicula.css"
-import {Link} from 'react-router-dom'
-
-function Pelicula({pelicula}) {
-  console.log(pelicula)
-let {poster_path, title, overview, id} = pelicula
+// import React, { Component } from 'react'
+// import "./Pelicula.css"
+// import {Link} from 'react-router-dom' 
 
 
-const verMas = () => {
-  console.log("verMas")
-  //<p>Descripción {overview} </p>
-}
+// export default class Pelicula extends Component {
 
-  return (
-  <div className="character-card mb-4">
-        <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title}/>
-        <h4>{title}</h4>
-        <div className='d-flex justify-content-end'>
-        <button className="btn btn-primary" onClick={()=>{pelicula.favorito(pelicula)}}>Favoritos</button>
-          <button className="btn btn-warning" onClick={verMas}>Ver Mas</button>
-          <Link to={`/pelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
-        </div>
-  </div>
-  )
-}
+//   constructor(props){
+//       super(props)
+//       this.state = {
+//           boton: ''
+//       }
+//   }
 
-export default Pelicula
+// let {poster_path, title, overview, id} = this.props.pelicula
 
+// const verMas = () => {
+// console.log("vermas")
+//   }
+
+//   render() {
+
+
+//       return (
+//           <>
+//               <article  className='item-card'>
+              
+//               <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title}/> 
+//               <h2>{title}</h2>
+//               <p className='decripcion'>{overview}</p>
+  
+//               <button className="btn btn-primary" onClick={()=>{this.props.pelicula.favorito(this.props.pelicula)}}>Favoritos</button>
+//               <button className="btn btn-warning" onClick={verMas}>Ver Mas</button>
+//               <Link to={`/pelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
+
+//               </article>
+//           </>
+//       )
+//   }
+// }
