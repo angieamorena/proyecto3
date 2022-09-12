@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import Pelicula from '../../components/Pelicula/Pelicula';
+import './Home.css';
 
  class Home extends Component {
 
@@ -82,7 +83,7 @@ this.setState(
   render() {
     return (
     <>
-
+      <div className='Contenedor'> 
       <form>
         <label >Buscar</label>
         <input
@@ -92,6 +93,7 @@ this.setState(
           value={this.state.filterBy}
         />
       </form>
+      </div>
     
   {this.state.filterBy==""?<>
       <Link to={`/pelicula/VerTodasP`} className="btn btn-warning" >Peliculas Populares</Link>
