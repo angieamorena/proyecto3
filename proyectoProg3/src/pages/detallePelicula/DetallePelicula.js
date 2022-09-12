@@ -8,7 +8,7 @@ class DetallePelicula extends Component {
         pelicula: {}
     }
    }
-ComponentDidMount (){
+componentDidMount (){
     fetch(`https://api.themoviedb.org/3/movie/${this.state.id}`)
 .then(res => res.json())
 .then(data => this.setState({

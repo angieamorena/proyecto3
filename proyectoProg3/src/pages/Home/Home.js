@@ -97,6 +97,9 @@ this.setState(
       </form>
 
       <button className='btn btn-primary mb-3 mt-3' onClick={() => this.agregarMas()}>Mas Peliculas</button>
+      
+      <h2>Peliculas Populares</h2>
+      
       <div className='card-container'>
 {this.state.cargando === false ? (
             <p>Cargando</p>
@@ -114,7 +117,7 @@ this.setState(
         
 }
     </div>
-
+<h2>Ultimos estrenos de Peliculas</h2>
     <div className='card-container'>
 {this.state.cargando === false ? (
             <p>Cargando</p>
