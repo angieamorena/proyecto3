@@ -113,7 +113,7 @@ this.setState(
         
           }
     </div>
-<h2>Ultimos estrenos de Peliculas</h2>
+    <Link to={`/pelicula/VerTodasA`} className="btn btn-warning" >Lo ultimo de Peliculas</Link>
     <div className='card-container'>
 {this.state.cargando === false ? (
             <p>Cargando</p>
@@ -132,6 +132,7 @@ this.setState(
           ) : (
         this.state.filtradas.map(filtrada =>(
             <Pelicula 
+        
              key={filtrada.id}
              pelicula={filtrada}
              favorito={(filtrada)=> this.handleFavoritos (filtrada)}
