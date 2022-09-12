@@ -7,7 +7,7 @@ class VerTodasA extends Component {
     super();
     this.state = {
       cargando: true,
-      peliculasPopulares: [],
+      peliculasAhora: [],
       filterBy:'',
       favoritos:[]
     };
@@ -30,7 +30,7 @@ class VerTodasA extends Component {
   return (
   <>
     
-    <h2> Todas las Peliculas recientemente agregadas</h2>
+    <h2> Todas las Peliculas recientemente estrenadas</h2>
     
     <div className='card-container'>
 {this.state.cargando === false ? (

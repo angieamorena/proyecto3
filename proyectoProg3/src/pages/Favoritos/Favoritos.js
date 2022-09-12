@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Pelicula from '../../Pelicula/Pelicula'
+import Pelicula from '../../components/Pelicula/Pelicula'
 
 class Favoritos extends Component {
     constructor() {

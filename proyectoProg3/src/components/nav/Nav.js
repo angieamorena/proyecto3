@@ -16,7 +16,11 @@ export default function Nav (){
             </li>
 
             <li className='nav-item'> 
-            <Link className='nav-link active'  to="/verTodas">VerTodas</Link>
+            <Link className='nav-link active'  to="/pelicula/verTodasP">Ver Todas las Populares</Link>
+            </li>
+
+            <li className='nav-item'> 
+            <Link className='nav-link active'  to="/pelicula/verTodasA">Ver los Estrenos</Link>
             </li>
         </ul>
         </div> 
