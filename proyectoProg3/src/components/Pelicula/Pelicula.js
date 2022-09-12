@@ -9,6 +9,10 @@ const eliminar = () => {
   console.log("eliminar")
 }
 
+const verDetalle = () => {
+  console.log("verDetalle")
+}
+
   return (
 <div className="character-card mb-4">
       <img src={image} alt={name}/>
@@ -18,7 +22,8 @@ const eliminar = () => {
       <div className='d-flex justify-content-end'>
       <button className="btn btn-primary" onClick={()=>{peliculaPopular.favorito(peliculaPopular)}}>Favoritos</button>
         <button className="btn btn-danger" onClick={eliminar}>Eliminar</button>
-        <Link to={`/detailMovie/id/${id}`} className="btn btn-warning" >Detalle</Link>
+        <button className="btn btn-warning" onClick={verDetalle}>Detalle</button>
+        <Link to={`/pelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
       </div>
 </div>
   )
