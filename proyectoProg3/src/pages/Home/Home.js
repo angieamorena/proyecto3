@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import Pelicula from '../../components/Pelicula/Pelicula';
 
  class Home extends Component {
@@ -9,6 +10,7 @@ import Pelicula from '../../components/Pelicula/Pelicula';
       cargando: true,
       peliculasPopulares: [],
       peliculasAhora: [],
+      filtradas: [],
       filterBy:'',
       favoritos:[]
     };
@@ -21,7 +23,7 @@ import Pelicula from '../../components/Pelicula/Pelicula';
         .then((res)=> res.json())
         .then(datos =>{ 
             return this.setState({
-            peliculasPopulares: datos.results,})})
+            peliculasPopulares: datos.results.slice(0,3)})})
         .catch( err => console.log(err))
 
         const url2 = "https://api.themoviedb.org/3/movie/now_playing?api_key=93e508f17b507f9418365fe0a4069252"
@@ -30,42 +32,37 @@ import Pelicula from '../../components/Pelicula/Pelicula';
             .then(datos =>{ 
                 console.log(datos)
                  return this.setState({
-                peliculasAhora: datos.results,
+                peliculasAhora: datos.results.slice(0,3)
             })})
             .catch( err => console.log(err))
       
  }
 
- agregarMas(){
-  const url = ("https://api.themoviedb.org/3/movie/popular?api_key=93e508f17b507f9418365fe0a4069252")
-  fetch(url)
-  .then((res)=> res.json())
-  .then(datos=>{
-      let arrayPrevio = this.state.pelicula;
-      let arrayActualizado = arrayPrevio.concat(datos.results);
-      this.setState({
-          peliculasPopulares:arrayActualizado,
-          peliculasAhora:arrayActualizado,
-      })})}
+ filtrarPeliculas(filtro){
 
- filtrarpeliculas(filtro){
+  if(filtro== ''){
+    return 
+  }
+  else{
 
-    const url = `?name=${filtro}`
+
+    const url = `https://api.themoviedb.org/3/search/movie/?api_key=93e508f17b507f9418365fe0a4069252&query=${filtro}`
     fetch(url)
         .then((res)=> res.json())
         .then(datos =>{ 
             
-            this.setState({peliculasPopulares: datos.results})
+            this.setState({filtradas: datos.results})
 
         })
         .catch( err => console.log(err))
+      }
  }
 
  handleChange(e){
   this.setState({
     filterBy: e.target.value
   },()=>{
-    this.filtrarpeliculas(this.state.filterBy)
+    this.filtrarPeliculas(this.state.filterBy)
   })
  }
 
@@ -95,13 +92,12 @@ this.setState(
           value={this.state.filterBy}
         />
       </form>
-
-      <button className='btn btn-primary mb-3 mt-3' onClick={() => this.agregarMas()}>Mas Peliculas</button>
-      
-      <h2>Peliculas Populares</h2>
+    
+  {this.state.filterBy==""?<>
+      <Link to={`/pelicula/VerTodasP`} className="btn btn-warning" >Peliculas Populares</Link>
       
       <div className='card-container'>
-{this.state.cargando === false ? (
+      {this.state.cargando === false ? (
             <p>Cargando</p>
           ) : (
         this.state.peliculasPopulares.map(peliculaPopular =>(
@@ -115,7 +111,7 @@ this.setState(
         
         )
         
-}
+          }
     </div>
 <h2>Ultimos estrenos de Peliculas</h2>
     <div className='card-container'>
@@ -130,6 +126,26 @@ this.setState(
         
 }
     </div>
+    </>:<>   <div className='card-container'>
+      {this.state.cargando === false ? (
+            <p>Cargando</p>
+          ) : (
+        this.state.filtradas.map(filtrada =>(
+            <Pelicula 
+             key={filtrada.id}
+             pelicula={filtrada}
+             favorito={(filtrada)=> this.handleFavoritos (filtrada)}
+             />)
+       
+            )
+        
+        )
+        
+          }
+    </div> 
+
+    </>}
+
 
 </>    
     ) 

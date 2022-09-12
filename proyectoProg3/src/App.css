@@ -1,3 +1,13 @@
+* { box-sizing: border-box; }
+
+        body { margin: 0; }        
+
+ul, ol { padding: 0; }
+
+li { list-style-type: none; }
+
+a { text-decoration: none; color: #000; }
+
 .App {
   text-align: center;
 }
@@ -26,6 +36,12 @@
 
 .App-link {
   color: #61dafb;
+}
+
+img {
+  object-fit: contain;
+  max-width: 50%;
+  max-height: 300px;
 }
 
 @keyframes App-logo-spin {

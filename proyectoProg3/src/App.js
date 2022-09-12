@@ -10,6 +10,7 @@ import NotFound from './pages/NotFound/NotFound';
 // import Favoritos from './pages/Favoritos/Favoritos'
 // import VerTodas from './components/pages/verTodas/VerTodas';
 import DetallePelicula from './pages/detallePelicula/DetallePelicula';
+import VerTodasP from './pages/verTodasP/VerTodasP';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           {/* <Route path="/verTodas" component={VerTodas}/>
           <Route path="/favoritos" component={Favoritos}/> */}
           <Route path="/pelicula/id:id" component={DetallePelicula}/> 
+          <Route path="/pelicula/VerTodasP" component={VerTodasP}/> 
           <Route component={NotFound}/>
         </Switch>
       <Footer /> 
