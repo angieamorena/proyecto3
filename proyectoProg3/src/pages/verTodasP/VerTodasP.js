@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Pelicula from '../../components/Pelicula/Pelicula';
+import './VerTodasP.css'
 
 class VerTodasP extends Component {
 
@@ -8,7 +9,6 @@ class VerTodasP extends Component {
     this.state = {
       cargando: true,
       peliculasPopulares: [],
-      filterBy:'',
       favoritos:[]
     };
   }    
@@ -32,7 +32,7 @@ class VerTodasP extends Component {
     
     <h2> Todas las Peliculas Populares</h2>
     
-    <div className='card-container'>
+    <div className='homePeliculasPopulares'>
 {this.state.cargando === false ? (
           <p>Cargando</p>
         ) : (

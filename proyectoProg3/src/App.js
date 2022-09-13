@@ -9,7 +9,7 @@ import Home from './pages/Home/Home';
 import NotFound from './pages/NotFound/NotFound';
 import Favoritos from './pages/Favoritos/Favoritos'
 import DetallePelicula from './pages/detallePelicula/DetallePelicula';
-import VerTodasP from './pages/verTodasP/VerTodasP';
+import VerTodasP from './pages/VerTodasP/VerTodasP';
 import VerTodasA from './pages/VerTodasA/VerTodasA';
 
 function App() {

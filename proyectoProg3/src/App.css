@@ -1,4 +1,4 @@
-* { box-sizing: border-box; }
+/* * { box-sizing: border-box; }
 
         body { margin: 0; }        
 
@@ -38,11 +38,7 @@ a { text-decoration: none; color: #000; }
   color: #61dafb;
 }
 
-img {
-  object-fit: contain;
-  max-width: 50%;
-  max-height: 300px;
-}
+
 
 @keyframes App-logo-spin {
   from {
@@ -51,4 +47,273 @@ img {
   to {
     transform: rotate(360deg);
   }
+} */
+
+
+
+* { box-sizing: border-box; }
+
+        body { margin: 0; }        
+
+ul, ol { padding: 0; }
+
+li { list-style-type: none; }
+
+a { text-decoration: none; color: #000; }
+
+
+body {
+    background-color:rgba(16, 17, 16, 0.815);
+    color: white;
 }
+a{
+    color: white;
+    text-decoration: underline;
+}
+img {
+  object-fit: contain;
+}
+
+
+/*header*/
+
+.navegador {
+    background-color: rgb(104, 159, 165);
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    font-family: 'Bebas Neue';
+    font-size: 23px;
+}
+
+.buscador{
+    padding: 2%;  
+      }
+
+.navegador ul a{
+    text-decoration: none;
+    color: white;
+    padding: auto; 
+    text-align: center;  
+    width: 100px;
+    max-width: 1000px;
+    margin: auto;   } 
+
+.navegador ul{
+    display: flex;
+    justify-content: space-between;  
+    flex-direction: row;
+    width: 700px;
+}
+
+.navegador img{
+    width: 10vw;
+    height: auto;
+}
+.navegador ul a:hover{
+    background: #fff;
+    color: rgb(125, 163, 180);}
+
+
+/* footer */
+.footer{
+    background-color: rgb(104, 159, 165);
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
+    text-align: center;
+}
+
+
+ .alumnos{
+    font-weight: bolder;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+}
+
+
+
+/*home*/
+.homePeliculasPopulares{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.homePeliculasPopulares article{
+    width: 15%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+.homePeliculasPopulares article img{
+    width: 100%;
+    max-height: 350px;
+    height: 70%;
+}
+
+
+.homeLasPeliculasMasValoradas{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.homeLasPeliculasMasValoradas article{
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+.homeLasPeliculasMasValoradas article img {
+    width: 100%;
+    max-height: 350px;
+}
+
+
+.tituloPelicula{
+  text-align: center;
+  text-decoration: none;
+  color:#fff;
+}
+/*favoritos*/
+
+.favorite h1{
+    background-color: rgb(104, 159, 165);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+}
+.favoritePelis{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+   
+}
+
+.favoritePelis article{
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+.favoritePelis a {
+    color: white;
+    text-decoration: underline;
+}
+
+.favorite h2{
+    background-color: rgb(104, 159, 165);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 25px;
+    text-decoration: none;
+    color: white;
+}
+
+.favoritePelis article img{
+    width: 100%;
+    max-height: 500px;
+
+}
+.favoriteSeries{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 10x;
+}
+
+.favoriteSeries article{
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+.favoriteSeries article img{
+    width: 100%;
+    max-height: 300px;
+}
+
+.favoriteSeries a{
+    color: white;
+    text-decoration: underline;
+}
+
+
+/*Dettale peliculas */
+.detallePeliculas h2{
+    background-color: rgb(104, 159, 165);
+    text-align: center;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 23px;
+    }
+
+.detallePeliculas h1{
+    background-color: rgb(104, 159, 165);
+    text-align: center;
+    width: 100vw;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
+    }
+
+.detallePeliculas section{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px 10px;
+}
+.detallePeliculas section a{
+text-decoration: underline;
+}
+
+.detallePeliculas article{
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+.detallePeliculas article img{
+    width: 100%;
+    max-height:350px;
+}
+
+
+
+
+/*detalles*/
+
+
+.detalles section {
+    display: flex;
+    flex-direction: row;
+}
+
+.detalles article {
+    margin: 20px;
+    font-size: 20px;
+}
+
+.detalles img {
+    max-height: 600px;
+}
+

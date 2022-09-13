@@ -1,0 +1,20 @@
+
+div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+article{
+    width: 17%;
+    background-color: rgb(104, 159, 165);
+    margin: 2%;
+}
+
+img {
+    width: 100%;
+    max-height: 350px;
+}

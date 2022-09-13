@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Pelicula from '../../components/Pelicula/Pelicula';
-
+import '../VerTodasA/VerTodasA.css'
 class VerTodasA extends Component {
 
   constructor() {
@@ -29,10 +29,11 @@ class VerTodasA extends Component {
  render() {
   return (
   <>
-    
+  
     <h2> Todas las Peliculas recientemente estrenadas</h2>
-    
-    <div className='card-container'>
+
+    <div className='homeLasPeliculasMasValoradas'>
+  
 {this.state.cargando === false ? (
           <p>Cargando</p>
         ) : (

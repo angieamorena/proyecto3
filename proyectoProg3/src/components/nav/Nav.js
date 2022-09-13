@@ -4,7 +4,7 @@ import './Nav.css'
 
 export default function Nav (){
     return (
-        <nav className="navbar navbar-expand-lg bg-light">
+        <nav className="navegador">
         <div className="container-fluid">
         <ul className='container-fluid'>
             <li className='nav-item'> 

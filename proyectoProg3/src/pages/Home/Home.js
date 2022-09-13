@@ -84,7 +84,7 @@ this.setState(
     return (
     <>
       <div className='Contenedor'> 
-      <form>
+      <form clasName='buscador'>
         <label >Buscar</label>
         <input
           type="search"
@@ -96,9 +96,9 @@ this.setState(
       </div>
     
   {this.state.filterBy==""?<>
-      <Link to={`/pelicula/VerTodasP`} className="btn btn-warning" >Peliculas Populares</Link>
+      <Link to={`/pelicula/VerTodasP`} className="tituloPelicula" >Peliculas Populares</Link>
       
-      <div className='card-container'>
+      <div className='homePeliculasPopulares'>
       {this.state.cargando === false ? (
             <p>Cargando</p>
           ) : (
@@ -115,8 +115,8 @@ this.setState(
         
           }
     </div>
-    <Link to={`/pelicula/VerTodasA`} className="btn btn-warning" >Lo ultimo de Peliculas</Link>
-    <div className='card-container'>
+    <Link to={`/pelicula/VerTodasA`} className="tituloPelicula" >Lo ultimo de Peliculas</Link>
+    <div className='homeLasPeliculasMasValoradas'>
 {this.state.cargando === false ? (
             <p>Cargando</p>
           ) : (
