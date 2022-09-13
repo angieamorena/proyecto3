@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Pelicula from '../../components/Pelicula/Pelicula';
-import '../VerTodasP/VerTodasP.css'
+import './VerTodasP.css'
 
 class VerTodasP extends Component {
 

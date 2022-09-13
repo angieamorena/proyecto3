@@ -12,7 +12,7 @@ export default function Nav (){
             </li>
 
             <li className='nav-item'> 
-            <Link className='nav-link active'  to="/favoritos">Favoritos</Link>
+            <Link className="nav-link "  to="/pelicula/favoritos">Favoritos</Link>
             </li>
 
             <li className='nav-item'> 

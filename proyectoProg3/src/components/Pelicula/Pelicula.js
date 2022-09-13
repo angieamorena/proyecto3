@@ -1,9 +1,11 @@
-import React, { Component } from 'react'
+import React/*, { Component }*/ from 'react'
 import "./Pelicula.css"
 import {Link} from 'react-router-dom' 
 
+function Pelicula (props){
+    let {poster_path, title, overview, id} = props.pelicula
 
-export default class Pelicula extends Component {
+{/*class Pelicula extends Component {
 
   constructor(props){
       super(props)
@@ -12,14 +14,15 @@ export default class Pelicula extends Component {
       }
   }
 
-  
 
-  render() {
 
-    let {poster_path, title, overview, id} = this.props.pelicula
-    const verMas = () => {
-        console.log("vermas")}
-  
+ // render() {
+
+    //let {poster_path, title, overview, id} = props.pelicula
+    //const verMas = () => {
+       // console.log("vermas")}
+    
+*/}
       return (
           <>
               <article  className='item-card'>
@@ -27,13 +30,17 @@ export default class Pelicula extends Component {
               <img src={`https://image.tmdb.org/t/p/original${poster_path}`} alt={title}/> 
               <h2>{title}</h2>
               <p className='decripcion'>{overview}</p>
-  
-              <button className="btn btn-primary" onClick={()=>{this.props.pelicula.favorito(this.props.pelicula)}}>Favoritos</button>
-              <button className="btn btn-warning" onClick={verMas}>Ver Mas</button>
-              <Link to={`/pelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
+
+              <div className='d-flex justify-content-end'>
+              <button className="btn btn-primary" onClick={()=>{props.favorito(props.pelicula)}}>Favoritos</button>
+              {/*<button className="btn btn-warning" onClick={verMas}>Ver Mas</button>*/}
+              <Link to={`/Home/id/:${id}`} className="btn btn-warning" >Ver Detalle</Link>
+              </div>      
 
               </article>
           </>
       )
-  }
-}
+ }
+//}
+
+export default Pelicula

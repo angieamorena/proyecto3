@@ -2,7 +2,6 @@ import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 
 import './App.css';
-
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Home/Home';
@@ -21,8 +20,8 @@ function App() {
           <Route path="/" exact  >
             <Home />
           </Route>
-     {     <Route path="/favoritos" component={Favoritos}/> }
-          <Route path="/pelicula/id:id" component={DetallePelicula}/> 
+          <Route path="/pelicula/favoritos" component={Favoritos}/> 
+          <Route path="/Home/id/:id" component={DetallePelicula}/> 
           <Route path="/pelicula/VerTodasP" component={VerTodasP}/> 
           <Route path="/pelicula/VerTodasA" component={VerTodasA}/> 
           <Route component={NotFound}/>

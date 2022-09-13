@@ -13,12 +13,13 @@ import './Home.css';
       peliculasAhora: [],
       filtradas: [],
       filterBy:'',
-      favoritos:[]
+      favoritos:[],
+      pelicula: []
     };
   }    
 
  componentDidMount(){
-  this.setState({favorito: localStorage.getItem('favoritos') || []})
+  this.setState({favorito: JSON.parse(localStorage.getItem('favoritos')) || []})
     const url = "https://api.themoviedb.org/3/movie/popular?api_key=93e508f17b507f9418365fe0a4069252"
     fetch(url)
         .then((res)=> res.json())
@@ -71,11 +72,17 @@ import './Home.css';
 
   console.log(this.state.favoritos)
   if (this.state.favoritos.some(fav => pelicula.id === fav.id)){
-  console.log("verdadero")
- }else{
+  console.log("agregar a favoritos")
+  this.setState({favoritos: this.state.favoritos.filter( peli => peli.id !== pelicula.id)}, ()=>{
+    localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
+    console.log("quitar de favoritos")
+})
+console.log(this.state.favoritos.filter( peli => peli.id !== pelicula.id))
+  }else{
 this.setState(
   {favoritos:[...this.state.favoritos, pelicula]}, ()=>
 { localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
+console.log("quitar de favoritos")
 })
  }
 }
@@ -84,7 +91,7 @@ this.setState(
     return (
     <>
       <div className='Contenedor'> 
-      <form clasName='buscador'>
+      <form className='buscador'>
         <label >Buscar</label>
         <input
           type="search"
