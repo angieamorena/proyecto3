@@ -21,7 +21,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/pelicula/favoritos" component={Favoritos}/> 
-          <Route path="/Home/id/:id" component={DetallePelicula}/> 
+          <Route path="/detallePelicula/id/:id" component={DetallePelicula}/> 
           <Route path="/pelicula/VerTodasP" component={VerTodasP}/> 
           <Route path="/pelicula/VerTodasA" component={VerTodasA}/> 
           <Route component={NotFound}/>

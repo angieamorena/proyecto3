@@ -27,7 +27,7 @@ export default class Pelicula extends Component {
   
               <button className="btn btn-primary" onClick={()=>{this.props.pelicula.favorito(this.props.pelicula)}}>Favoritos</button>
               <button className="btn btn-warning" onClick={verMas}>Ver Mas</button>
-              <Link to={`/pelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
+              <Link to={`/detallePelicula/id/${id}`} className="btn btn-warning" >Detalle</Link>
 
               </article>
           </>

@@ -8,7 +8,7 @@ export default function Nav (){
         <div className="container-fluid">
         <ul className='container-fluid'>
             <li className='nav-item'> 
-            <Link className='nav-link active' aria-current="page" to="/">home</Link>
+            <Link className='nav-link active' aria-current="page" to="/">Home</Link>
             </li>
 
             <li className='nav-item'> 
