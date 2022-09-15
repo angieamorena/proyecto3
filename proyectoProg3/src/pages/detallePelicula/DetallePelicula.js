@@ -26,7 +26,7 @@ componentDidMount (){
 
   render () {
     return (
-<>
+<div className='detalle-card'>
 <h1>Detalle de {this.state.pelis.title}</h1>
     <img src ={`https://image.tmdb.org/t/p/original${this.state.pelis.poster_path}`} alt= {this.state.pelis.title}/>
     <p>Estreno: {this.state.pelis.release_date}</p>
@@ -37,7 +37,7 @@ componentDidMount (){
    {/* <img src ={this.state.pelis.image} alt= {this.state.pelis.title}/> 
     <h2>Detalle de {this.state.pelis.title}</h2>
     <p className='decripcion:'>{this.state.pelis.overview}</p>*/}
-</>
+</div>
     )
     
   }
