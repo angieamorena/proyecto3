@@ -68,7 +68,7 @@ import './Home.css';
   })
  }
 
- handleFavorito(pelicula){
+ handleFavoritos(pelicula){
 
   console.log(this.state.favoritos)
   if (this.state.favoritos.some(fav => pelicula.id === fav.id)){

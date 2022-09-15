@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-
+import './detallePelicula.css'
 
 
 class DetallePelicula extends Component {
@@ -26,18 +26,17 @@ componentDidMount (){
 
   render () {
     return (
-<>
+<div className='detalle-card'>
 <h1>Detalle de {this.state.pelis.title}</h1>
     <img src ={`https://image.tmdb.org/t/p/original${this.state.pelis.poster_path}`} alt= {this.state.pelis.title}/>
+    <div className='card-body'>
     <p>Estreno: {this.state.pelis.release_date}</p>
     <p>Rating: {this.state.pelis.popularity}</p>
-    <p>duracion: {this.state.pelis.duracion}</p>
+    <p>duracion: {this.state.pelis.runtime}</p>
     <p>sinopsis: {this.state.pelis.overview}</p>
-    
-   {/* <img src ={this.state.pelis.image} alt= {this.state.pelis.title}/> 
-    <h2>Detalle de {this.state.pelis.title}</h2>
-    <p className='decripcion:'>{this.state.pelis.overview}</p>*/}
-</>
+    </div>
+   
+</div>
     )
     
   }
