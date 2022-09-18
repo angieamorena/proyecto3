@@ -15,9 +15,7 @@ export default class Pelicula extends Component {
   render() {
 
     let {poster_path, title, overview, id} = this.props.pelicula
-    const verMas = () => {
-        console.log("vermas")}
-  
+   
       return (
           <>
               <article  className='item-card'>
