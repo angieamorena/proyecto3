@@ -45,6 +45,24 @@ class VerTodasA extends Component {
           .catch( err => console.log(err))
         }
    }
+   handleFavoritos(pelicula){
+
+    console.log(this.state.favoritos)
+    if (this.state.favoritos.some(fav => pelicula.id === fav.id)){
+    console.log("agregar a favoritos")
+    this.setState({favoritos: this.state.favoritos.filter( peli => peli.id !== pelicula.id)}, ()=>{
+      localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
+      console.log("quitar de favoritos")
+  })
+  console.log(this.state.favoritos.filter( peli => peli.id !== pelicula.id))
+    }else{
+  this.setState(
+    {favoritos:[...this.state.favoritos, pelicula]}, ()=>
+  { localStorage.setItem('favoritos', JSON.stringify(this.state.favoritos))
+  console.log("quitar de favoritos")
+  })
+   }
+  }
   
    handleChange(e){
     this.setState({
